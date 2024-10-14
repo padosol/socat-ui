@@ -1,12 +1,4 @@
-import {googleLogin} from "../api/login.js";
-
 const Header = ({toggleSidebar} : {toggleSidebar: () => void}) => {
-
-  const handleLoginButtonClick = async () => {
-    const repsonse = await googleLogin();
-
-    console.log(response);
-  }
 
   return (
     <header className=" text-white p-4 border">
@@ -20,7 +12,7 @@ const Header = ({toggleSidebar} : {toggleSidebar: () => void}) => {
           <h1 className="text-xl font-bold text-black cursor-pointer">SOCAT</h1>
         </div>
         <div className="flex items-center justify-evenly">
-          <button className="border text-black rounded-lg p-1" onClick={handleLoginButtonClick}>로그인</button>
+          <a className="border text-black rounded-lg p-1" href="http://localhost:3010/login">로그인</a>
         </div>
       </div>
     </header>
