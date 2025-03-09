@@ -4,6 +4,7 @@ import { Post } from "@/lib/definitions"
 import dynamic from "next/dynamic"
 import { Button } from "@/components/button"
 import Link from "next/link"
+import CommentSection from "./CommentSection"
 
 const EditorViewer = dynamic(() => import('./editor-viewer'), {
   ssr: false,
@@ -50,6 +51,9 @@ export default function PostDetail({
             </Link>
           </Button>
       </div>
+        {/* Add the CommentSection below */}
+        <CommentSection postId={post.postId}/>
     </div>
+    
   )
 }
